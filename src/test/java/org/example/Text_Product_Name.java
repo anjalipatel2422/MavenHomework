@@ -10,8 +10,7 @@ public class Text_Product_Name
 {
     static WebDriver driver;
 
-    public static void main(String[]args)
-    {
+    public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","C:\\soft\\chromedriver.exe");
         driver=new ChromeDriver();
         driver.manage().window().maximize();
@@ -28,16 +27,11 @@ public class Text_Product_Name
         driver.findElement(By.xpath("//span[text()=\"Shopping cart\"]")).click();
         String pageText=driver.findElement(By.linkText("HTC One M8 Android L 5.0 Lollipop")).getText();
         System.out.println(pageText);
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         String pageText1=driver.findElement(By.linkText("Nokia Lumia 1020")).getText();
         System.out.println(pageText1);
 
-
-
-    }}
+    }
+}
 
 
